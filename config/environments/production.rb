@@ -99,7 +99,7 @@ Rails.application.configure do
 
 
   config.action_mailer.delivery_method = :smtp
-  host = "#{ENV['umiwatari-chom']}.herokuapp.com"
+  host = "#{ENV[umiwatari-chom]}.herokuapp.com"
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.gmail.com',
