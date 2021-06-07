@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Umiwataru</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <a href="/"><img class="logo" src="Umiwatari4.png" alt="ロゴ"></a>
+        </div>
+        <div class="header-text">
+          <p>山の上のシェアハウス</p>
+          <h1>海渡り荘</h1>
+        </div>
+        <div class="header-list">
+          <ul>
+            <li>
+              <a href="/">ホーム</a>
+            </li>
+            <li>
+              <a href="/access">アクセス</a></li>
+            <li>
+              <a href="/price">料金</a>
+            </li>
+            <li>
+              <a href="/messages/index">お問い合わせ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+  </body>
+</html>
