@@ -1,3 +1,91 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.message-container {
+  padding: 250px 0 30px 0;
+  text-align: center;
+}
+
+.message-container h2 {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.inquiry {
+  padding: 15px 0;
+}
+
+.field {
+  margin-top: 5px;
+}
+
+.field-name {
+  padding: 5px;
+  width: 120px;
+}
+
+.field-address {
+  padding: 5px;
+  width: 200px;
+}
+
+.field-message {
+  height: 150px;
+  width: 400px;
+}
+
+.submit-btn {
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+}
+
+.bottom-wrapper {
+  color: black;
+  height: 80px;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.bottom-wrapper h2 {
+  font-size: 15px;
+}
+
+.bottom-wrapper a {
+  color: black;
+  font-size: 25px;
+  text-decoration: none;
+  margin-top: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: block;
+}
+
+
+
+/* ここからconfirmのcss */
+
+.confirm {
+  padding: 30px;
+}
+
+.p-text {
+  padding-top: 20px;
+}
+
+.confirm-btn {
+  padding:8px;
+  margin-top: 80px;
+  cursor: pointer;
+}
+
+/* ここからdoneのcss */
+
+.done-message {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.done-message h2 {
+  padding-bottom: 20px;
+}
