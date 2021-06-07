@@ -1,0 +1,22 @@
+FROM ruby:3.0.1
+
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+
+# yarnパッケージ管理ツールをインストール
+
+# Node.jsをインストール
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
+    apt-get install nodejs
+
+WORKDIR /tmp
+COPY Gemfile Gemfile.lock ./
+RUN bundle install
+
+WORKDIR /app
+COPY . /app
+
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
+
