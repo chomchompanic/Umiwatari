@@ -10,4 +10,8 @@ class HomeController < ApplicationController
 
   def access
   end
+
+  def sendgrid
+  end
+  
 end
