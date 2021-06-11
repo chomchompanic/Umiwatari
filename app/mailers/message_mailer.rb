@@ -3,8 +3,6 @@ class MessageMailer < ApplicationMailer
 
   def received_email(message)
     @message = message
-    mail(subject: 'webサイトよりメッセージが届きました') do |format|
-      format.text
-    end
+    mail to: ENV['MAIL'], subject: "Webサイトよりメッセージが届きました"
   end
 end
