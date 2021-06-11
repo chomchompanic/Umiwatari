@@ -101,12 +101,12 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   host = "#{ENV['HEROKU_APPNAME']}.herokuapp.com"
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
-  ActionMailer::Base.smtp_settings = {
-      :address => "smtp.gmail.com",
+  config.action_mailer.smtp_settings = {
+      :address => "smtp.sentgrid.net",
       :port => '587',
-      :domain => "gmail.com",
-      :user_name      => ENV['GMAIL_USERNAME'],
-      :password       => ENV['GMAIL_PASSWORD'],
+      :domain => "heroku.com",
+      :user_name      => 'sgwkpuhb@kke.com'
+      :password       => ENV['SENDGRID_APIKEY'],
       :authentication => :plain,
       :enable_starttls_auto => true
   }
